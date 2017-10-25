@@ -13,7 +13,14 @@ android {
         abortOnError false
     }
 }
-
+allprojects {
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/mvn/repository/' }
+        mavenCentral()
+        jcenter()
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
